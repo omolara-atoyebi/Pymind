@@ -2,14 +2,24 @@ output "resource_group_name" {
     value = azurerm_resource_group.rg.name
 }
 
-# output "language_account_name" {
-#     value = azapi_resource.language_account.name
-# }
+output "cognitive_account_name" {
+    value = azapi_resource.ai_account.name    
+  
+}
+output "ai_endpoint" {
+  value = "https://${azapi_resource.ai_account.name}.cognitiveservices.azure.com"
+}
 
-# # Typical Cognitive Services endpoint pattern; adjust if your region/sku differs
-# output "endpoint" {
-#     value = "https://${azapi_resource.language_account.name}.cognitiveservices.azure.com"
-# }
+output "ai_account_id" {
+  value = azapi_resource.ai_account.id
+}
+output "ai_primary_key" {
+  value = jsondecode(data.azapi_resource_action.language_keys.output).key1
+}
+output "ai_secondary_key" {
+  value = jsondecode(data.azapi_resource_action.language_keys.output).key2
+}
+
 
 # # Primary and secondary keys returned by the listKeys action
 # output "primary_key" {

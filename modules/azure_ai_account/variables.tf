@@ -14,8 +14,8 @@ variable "env" {
     description = "Environment tag for resources" 
 }
 
-# variable "sku" {
-#     type    = string
-#     default = "S0"
-#     description = "Cognitive Services sku (e.g. S0)"
-# }
+variable "sku" {
+    type    = string
+    default = "S"
+    description = "Cognitive Services sku"
+}
