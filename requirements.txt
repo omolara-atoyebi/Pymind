@@ -2,3 +2,4 @@ python-terraform==0.10.1
 azure-identity==1.17.0
 azure-mgmt-resource==23.1.0
 azure-mgmt-storage==21.2.1
+azure-ai-language-questionanswering==1.1.0
